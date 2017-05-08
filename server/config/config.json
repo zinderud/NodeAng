@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "123",
+    "password": "1234",
     "database": "node_ang_development",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "123",
+    "password": "1234",
     "database": "node_ang_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
