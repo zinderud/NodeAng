@@ -2,7 +2,8 @@
 logs
 *.log
 npm-debug.log*
-
+server/config/config.json
+server/config
 # Runtime data
 pids
 *.pid
@@ -36,5 +37,6 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 client/dist/bundle.js
-server/config/config.json
+
+
 /testis/*
