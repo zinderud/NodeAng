@@ -2,9 +2,9 @@
   "name": "node-ang",
   "version": "1.0.0",
   "description": "angnode",
-  "main": "app.js",
+  "main": "app.js ",
   "scripts": {
-    "start": " nodemon app.js --exec babel-node",
+    "start": "nodemon app.js --exec babel-node",
     "mig:test": "cross-env NODE_ENV=test sequelize db:migrate",
     "mig:dev": "cross-env NODE_ENV=development sequelize db:migrate",
     "mig:test:undo": "cross-env NODE_ENV=test sequelize db:migrate:undo:all",
@@ -63,6 +63,7 @@
     "supertest": "^3.0.0",
     "swagger-jsdoc": "^1.9.2",
     "mysql": "2.13.0"
+ 
   },
   "devDependencies": {
     "babel-core": "^6.24.0",

@@ -7,6 +7,17 @@ const role = express.Router();
 role.route('/api/role')
   .all(auth.verifyToken, auth.adminAccess)
   .get(roleController.getRoles)
-   .post(roleController.createRole);
+  .post(roleController.createRole);
+
+
+
+
+
+//open api
+
+role.route('/api/role/open')
+.get(roleController.getRoles)
+.post(roleController.createRole);
+
 
 module.exports = () => role;
