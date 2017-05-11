@@ -1,7 +1,7 @@
 export default (sequelize, DataTypes) => {
   const Role = sequelize.define('Role', {
     title: {
-      defaultValue: 'member',
+      //defaultValue: 'member',
       type: DataTypes.STRING,
       allowNull: false,
       validate: {

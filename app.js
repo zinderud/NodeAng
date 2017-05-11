@@ -8,7 +8,7 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from './webpack.config';*/
 import indexRoute from './server/routes/index';
 import roleRoute from './server/routes/roleRoute';
-
+import userRoute from './server/routes/userRoute';
 
 const port = parseInt(process.env.PORT, 10) || 8000;
 
@@ -33,7 +33,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'client/dist')));
 app.use(indexRoute());
 app.use(roleRoute());
-
+app.use(userRoute());
 app.listen(port, (req, res) => {
   console.log(`Listening on port ${port}`);
 });

@@ -1,7 +1,10 @@
 import model from '../models';
+import mainController from './mainController'
+class roleController extends mainController{
 
-class roleController {
-
+constructor(){
+  super();
+}
   /**
    * Method createRole
    * @param {Object} request - request Object
@@ -12,8 +15,9 @@ class roleController {
     model.Role.sync();
     model.Role.create(request.body)
       .then(newRole => response.status(201).send(newRole))
-      .catch(error => response.status(400).send(error.errors)
-      );
+   //  .catch(error => response.status(400).send(error.errors) );
+      .catch(error =>  super.sendError(response,error,400) );
+         
   }
 
   /**
