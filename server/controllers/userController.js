@@ -229,11 +229,11 @@ class UserController {
    * @returns {Object} response object
    */
   static getAllRole(request, response) {
-    const limit = request.query.limit || '10';
-    const offset = request.query.offset || '0';
-    const queryRole = request.query.role;
+    const limit = request.query.limit || 10;
+    const offset = request.query.offset || 0;
+    const queryRole =request.query.role;
     console.log('queryRole', typeof (queryRole));
-    console.log('request.decoded.roleId', typeof (request.decoded.roleId));
+   console.log('request.decoded.roleId', typeof (request.decoded.roleId));
     if (queryRole === '1') {
       if (request.decoded.roleId !== 1) {
         return response.status(401).send({
@@ -279,8 +279,8 @@ class UserController {
    * @returns {Object} response object
    */
   static getAllAdmin(request, response) {
-    const limit = request.query.limit || '10';
-    const offset = request.query.offset || '0';
+    const limit = request.query.limit || 10;
+    const offset = request.query.offset || 0;
     model.User.findAndCountAll({
       limit,
       offset,

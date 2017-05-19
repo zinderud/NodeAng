@@ -36,8 +36,8 @@ user.route('/api/user/logout')
 
 
 //open api
-user.route('/api/users/open/:id')
-.get(userController.getUser)
+user.route('/api/users/open/')
+.get(userController.getAllAdmin)
 
 
 module.exports = () => user;
